@@ -146,19 +146,19 @@ void loop() {
     M5.Lcd.setCursor(SCREEN_WIDTH - textWidth - 7, SCREEN_HEIGHT - 24);  // Adjust cursor position for larger text
     M5.Lcd.printf("%.1fF", minTempF);
 
-    // Debugging: Print max and min temps to Serial
-    Serial.printf("Max Temp: %.1f F, Min Temp: %.1f F\n", maxTempF, minTempF);
+    // Display the battery voltage percentage at the top right corner
+    int vol = StickCP2.Power.getBatteryVoltage();
+    int batteryPercent = map(vol, 3000, 4200, 0, 100);  // Convert voltage to percentage
+    if (batteryPercent > 100) batteryPercent = 100;  // Cap at 100%
+    if (batteryPercent < 0) batteryPercent = 0;      // Floor at 0%
+    M5.Lcd.setCursor(SCREEN_WIDTH - 60, 0);  // Adjust cursor for the top right
+    M5.Lcd.printf("%d%%", batteryPercent);
 
     // Check if the big button is pressed
     if (M5.BtnA.wasPressed()) {
-        // Beep when the button is pressed
-        tone(26, 1000, 100);  // Beep on GPIO26 (adjust if necessary), 1kHz tone, 100ms duration
-
-        // Wait for a moment to allow the beep sound to finish
-        delay(100);
-
-        // Power off the device
-        M5.Power.powerOff();  // Corrected method name to powerOff()
+        StickCP2.Speaker.tone(10000, 100);  // Play tone
+        delay(100);  // Wait for a short moment
+        StickCP2.Power.powerOff();  // Power off the device
     }
 
     // No delay for faster refresh

@@ -2,7 +2,14 @@
 
 This project transforms the M5StickCPlus2 into a portable thermal camera using the AMG8833 infrared sensor. The device displays a thermal image on its screen, with auto-ranging colors to represent temperature differences. Additionally, it shows the highest and lowest temperatures in Fahrenheit. You can power off the device by pressing the large button, which also triggers a beep sound before shutting down.
 
+## Version 2
+I've added a battery percentage indicator, and a button to power off the device.
+
+## Pics
+
 ![Thermal Camera in Action](camera.jpeg)
+
+![V2](demov2.jpg)
 
 ![Demo Mounted](demomounted.gif)
 
@@ -38,7 +45,7 @@ Below is the pin configuration used to connect the AMG8833 sensor to the M5Stick
 - **Adafruit AMG88xx Library**
 
 ### Easy Mode
-Use M5 Burner and burn the this [M5StickCPlus2](m5stickcplus-2-ircam.ino.m5stack_stickc_plus2.bin) to your M5StickCPlus2.
+Use M5 Burner and burn the this [M5StickCPlus2](m5stickcplus-2-ircam.v2.bin) to your M5StickCPlus2.
 
 ### Installation
 
