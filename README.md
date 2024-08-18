@@ -4,7 +4,7 @@ This project transforms the M5StickCPlus2 into a portable thermal camera using t
 
 ![Thermal Camera in Action](camera.jpeg)
 
-![Demo Thermal Camera in Action](demo.gif)
+![Demo Mounted](demomounted.gif)
 
 ## Features
 
@@ -63,6 +63,13 @@ Connect your M5StickCPlus2 and upload the sketch via the Arduino IDE.
 ## Usage
 Thermal Display: Once the device is powered on, it will display the thermal image in real-time.
 Power Off: Press the large button to beep and power off the device.
+
+## Mount or Hardware
+I have used a 3D printed case to mount the device. The case is available in the [M5StickCplus2IrCamera.stl](M5StickCplus2IrCamera.stl) file in this repository.
+
+![mounted00.jpg](mounted00.jpg)
+![mounted01.jpg](mounted01.jpg)
+
 
 ## License
 This project is licensed under the GPLv3 License - see the LICENSE file for details.
