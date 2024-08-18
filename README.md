@@ -37,6 +37,9 @@ Below is the pin configuration used to connect the AMG8833 sensor to the M5Stick
 - **M5StickCPlus2 Library**
 - **Adafruit AMG88xx Library**
 
+### Easy Mode
+Use M5 Burner and burn the this [M5StickCPlus2](m5stickcplus-2-ircam.ino.m5stack_stickc_plus2.bin) to your M5StickCPlus2.
+
 ### Installation
 
 1. **Clone the Repository:**
